@@ -31,7 +31,10 @@ public class Main {
 //            if (choose>5){
 //                System.out.println("vi lòng chọn đúng chức năng");}
 //        }while(choose>5);
-        functionOperation.moreStaff(lissNhanVien);
+        //thêm nhân viên mới
+//        functionOperation.moreStaff(lissNhanVien);
+        //show danh sách nhân viên hiên tại
+        functionOperation.showEntireList(lissNhanVien);
     }
 
 }

@@ -93,4 +93,11 @@ public class FunctionOperation {
         arr1=result;
         return arr1;
     }
+    public void showEntireList(NhanVien[]listStaff){
+        for (int i = 0; i < listStaff.length; i++) {
+            System.out.printf("Hiển Thị vị trí thứ %d:\n\n",(i+1));
+            System.out.printf("mã nhân viên: %d \n tên nhân viên: %s \n Gmail: %s\n Tuổi: %d\n Phone: %d",listStaff[i].getMaNhanVien(),listStaff[i].getName(),listStaff[i].getGmail(),listStaff[i].getAge(),listStaff[i].getPhone());
+        }
+    }
+
 }
