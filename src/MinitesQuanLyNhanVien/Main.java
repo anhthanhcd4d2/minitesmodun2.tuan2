@@ -48,7 +48,8 @@ public class Main {
         //thêm nhân viên mới
 //        functionOperation.moreStaff(lissNhanVien);
         //show danh sách nhân viên hiên tại
-        functionOperation.showEntireList(lissNhanVien);
+        System.out.println("Tong tien:\t"+functionOperation.salaryOfAllEmployees(listEmployeeSalary));
+        System.out.println("tien trung binh:\t "+functionOperation.averagedWageFullTime(listEmployeeSalary));
     }
 
 }
