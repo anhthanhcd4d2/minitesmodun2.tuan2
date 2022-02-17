@@ -14,12 +14,12 @@ public class NhaVienFulLTime extends NhanVien {
 
     }
 
-    public NhaVienFulLTime(double luongCung, double tienThuong, double tienPhat) {
+    public NhaVienFulLTime( int manNhanVien,String name,double luongCung, double tienThuong, double tienPhat) {
+        super(manNhanVien,name);
         this.luongCung = luongCung;
         this.tienThuong = tienThuong;
         this.tienPhat = tienPhat;
     }
-
     public double getLuongCung() {
         return luongCung;
     }

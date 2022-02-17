@@ -7,7 +7,7 @@ public abstract class NhanVien {
     protected int age;
     private int phone;
 
-    public NhanVien() {
+    public NhanVien(int manNhanVien, String name) {
     }
 
     public NhanVien(int maNhanVien, String name, String gmail, int age, int phone) {

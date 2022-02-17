@@ -5,8 +5,8 @@ public class NhanVienParTime extends NhanVien {
     public NhanVienParTime(int maNhanVien,String name, String gmail,int age,int phone) {
         super(maNhanVien, name, gmail, age, phone);
     }
-
-    public NhanVienParTime(double hour) {
+    public NhanVienParTime(int maNhanvien, String name ,double hour) {
+        super(maNhanvien,name);
         this.hour = hour;
     }
 
