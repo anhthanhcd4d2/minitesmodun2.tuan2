@@ -133,11 +133,6 @@ public class FunctionOperation {
             }
         }
     }
-    public int hieutes(){
-        int o1 = 0;
-        int o2 = 0;
-        return  o1 - o2;
-    }
 }
 //    public void xapXepLuongFullTimeTangLen(Staff[]listStaff){
 //        int cout=0;

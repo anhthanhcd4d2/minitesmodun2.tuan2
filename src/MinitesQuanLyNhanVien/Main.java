@@ -125,15 +125,17 @@ public class Main {
                             punish = scanner.nextInt();
                             functionOperation.nhapTienChoNhanVienFullTime(listStaff, basic, bonus, punish);
                         }
-                        if ( choose == 2) {
-                            // nhập lương cho nhân viên pastime
-                            if (listStaff[i] instanceof StaffParTime) {
-                                System.out.println(STAFF_NUMBER + (i + 1));
-                                System.out.println(EMPLOYEE_MOTHER + listStaff[i].getMaNhanVien());
-                                System.out.println(NAME + listStaff[i].getName());
-                                hour = scanner.nextDouble();
-                                functionOperation.nhapTienChoNhanVienParTime(listStaff, hour);
-                            }
+                    }
+                }
+                if (choose == 2) {
+                    // nhập lương cho nhân viên pastime
+                    for (int i = 0; i < listStaff.length; i++) {
+                        if (listStaff[i] instanceof StaffParTime) {
+                            System.out.println(STAFF_NUMBER + (i + 1));
+                            System.out.println(EMPLOYEE_MOTHER + listStaff[i].getMaNhanVien());
+                            System.out.println(NAME + listStaff[i].getName());
+                            hour = scanner.nextDouble();
+                            functionOperation.nhapTienChoNhanVienParTime(listStaff, hour);
                         }
                     }
                 }
@@ -200,7 +202,11 @@ public class Main {
                 ArrayList<Staff> newlist= new ArrayList<>(Arrays.asList(listStaff));
                 for (int i = 0; i <newlist.size() ; i++) {
                     System.out.println(newlist.get(i).tinhLuong());
-//                    newlist.sort((o1, o2) -> o1.getMaNhanVien() - o2.getMaNhanVien());
+                    newlist.get(i).tinhLuong();
+                    Staff[] finalListStaff = listStaff;
+                    newlist.sort((o1, o2) -> functionOperation.salaryOfAllEmployeesFullTime(finalListStaff)- functionOperation.salaryOfAllEmployeesParTime(finalListStaff));
+                    // hoi chi kieeu anh cach hoat dong cua  xap xep mang,
+                    System.out.println(newlist.get(i).getName());
                 }
             }
         } while (check < 20);
